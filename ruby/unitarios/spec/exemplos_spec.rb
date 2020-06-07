@@ -6,3 +6,5 @@ describe 'suite rspec' do
 
     end
 end
+
+#Rspec é uma gem (library)
