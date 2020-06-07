@@ -1,4 +1,8 @@
 # frozen_string_literal: true
+# Ruby é uma linguagem considerada puramente orientada a objetos
+# porque em Ruby tudo são objetos
+# uma classe possui atributos e métodos
+#caracteristicas e ações
 
 class Conta
   attr_accessor :saldo
