@@ -11,7 +11,6 @@ class Veiculo #super classe
 
     def ligar
         puts "#{nome} está pronto para iniciar o trajeto!"
-
     end
 
     def buzinar
@@ -32,7 +31,6 @@ class Moto < Veiculo
     def pilotar
         puts "#{nome} iniciando o trajeto."
     end
-
 end
 
 civic = Carro.new('Civic', 'Honda', 'SI') #uma nova instancia e passa os valores dentro do argumento
