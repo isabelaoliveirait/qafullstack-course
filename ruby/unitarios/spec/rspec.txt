@@ -108,3 +108,4 @@ expect(string).not_to start_with("ninja")
 expect(string).to end_with("ninja")
 expect(string).not_to end_with("qa")
 
+Referencia: https://relishapp.com/rspec
