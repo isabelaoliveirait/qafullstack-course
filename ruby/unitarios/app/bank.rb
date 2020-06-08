@@ -1,21 +1,29 @@
-class ContaCorrente
+class Conta
+  attr_accessor :saldo, :mensagem
 
-    attr_accessor :saldo, :mensagem
+  def initialize(saldo)
+    self.saldo = saldo
+  end
 
-    def initialize(saldo)
-        self.saldo = saldo
+  def saca(valor, max, taxa)
+    if (valor > self.saldo)
+      self.mensagem = "Saldo insuficiente para saque"
+    elsif (valor > max)
+      self.mensagem = "Limite máximo por saque é de R$ " + max.to_s
+    else
+      self.saldo -= valor + taxa
     end
+  end
+end
 
-    def saca(valor) 
-        if (valor > self.saldo)
-            self.mensagem = 'Saldo insuficiente para saque'
+class ContaCorrente < Conta
+  def saca(valor, max = 700, taxa = 5.00)
+    super
+  end
+end
 
-        elsif (valor > 700.00)
-            self.mensagem = 'Limite máximo por saque é de R$ 700 reais'
-
-        else
-            self.saldo -= valor
-
-        end
-    end
+class ContaPoupanca < Conta
+  def saca(valor, max = 500, taxa = 2.00)
+    super
+  end
 end
